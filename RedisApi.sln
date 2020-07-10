@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisApi", "RedisApi\RedisApi.csproj", "{0779E27E-E29C-45CC-AD95-C3670223B63E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A9EA03B-AACA-4A9B-855F-17D2B54DF071}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+		redis-dev.yaml = redis-dev.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisLibrary", "RedisLibrary\RedisLibrary.csproj", "{C0D398FC-1A92-497C-9C9A-300D40B1E98A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0779E27E-E29C-45CC-AD95-C3670223B63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0779E27E-E29C-45CC-AD95-C3670223B63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0779E27E-E29C-45CC-AD95-C3670223B63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0779E27E-E29C-45CC-AD95-C3670223B63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {803B0F60-1FE1-405E-903A-5B80F4A9389A}
+	EndGlobalSection
+EndGlobal
