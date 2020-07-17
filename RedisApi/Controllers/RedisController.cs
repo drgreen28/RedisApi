@@ -30,6 +30,7 @@ namespace RedisApi.Controllers
         {
             List<string> values = new List<string>();
             values.Add("Current configuration is for " + Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"));
+            values.Add("Version: " + Environment.GetEnvironmentVariable("VERSION"));
             values.Add("Feature A is " + Configuration["Customer:FeatureA"]);
             values.Add("Feature B is " + Configuration["Customer:FeatureB"]);
 

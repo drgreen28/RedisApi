@@ -3,32 +3,35 @@ version: '3.4'
 services:
 
   client1:
-    image: redisapi:1.0.4
+    image: redisapi:1.0.5
     build:
       context: .
       dockerfile: RedisApi/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Client1
+      - VERSION=1.0.5
     ports:
       - "5100:80"
 
   client2:
-    image: redisapi:1.0.4
+    image: redisapi:1.0.5
     build:
       context: .
       dockerfile: RedisApi/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Client2
+      - VERSION=1.0.5
     ports:
       - "5101:80"
 
   netapp:
-    image: redisapi:1.0.4
+    image: redisapi:1.0.5
     build:
       context: .
       dockerfile: RedisApi/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=NetApp
+      - VERSION=1.0.5
     ports:
       - "5102:80"
 
