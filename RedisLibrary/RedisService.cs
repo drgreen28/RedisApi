@@ -83,7 +83,7 @@ namespace RedisLibrary
             return response;
         }
 
-        public async Task<ServiceResponse> SaveTable(string table, JObject obj, string key)
+        public async Task<ServiceResponse> SaveTable(string table, string obj, string key)
         {
             ServiceResponse response = new ServiceResponse();
 
@@ -92,7 +92,7 @@ namespace RedisLibrary
                 if(obj != null)
                 {
                     var hash = new HashEntry[1];
-                    hash[0] = new HashEntry(key, obj.ToString(Formatting.None));
+                    hash[0] = new HashEntry(key, obj);
 
                     await Db.HashSetAsync(table, hash);
                     response.Message = "Success";
@@ -108,16 +108,16 @@ namespace RedisLibrary
             return response;
         }
 
-        public async Task<ServiceResponse<List<JObject>>> GetTable(string table)
+        public async Task<ServiceResponse> GetTable(string table)
         {
-            ServiceResponse<List<JObject>> response = new ServiceResponse<List<JObject>>();
-            var list = new List<JObject>();
+            ServiceResponse response = new ServiceResponse();
+            var list = new List<string>();
 
             try
             {
                 var values = await Db.HashValuesAsync(table);
                 foreach (var value in values)
-                    list.Add(JObject.Parse(value.ToString()));
+                    list.Add(value);
 
                 response.ReturnValue = list;
                 response.Success = true;
@@ -131,16 +131,16 @@ namespace RedisLibrary
             return response;
         }
 
-        public async Task<ServiceResponse<List<JObject>>> GetTable(string table, string key)
+        public async Task<ServiceResponse> GetTable(string table, string key)
         {
-            ServiceResponse<List<JObject>> response = new ServiceResponse<List<JObject>>();
-            var list = new List<JObject>();
+            ServiceResponse response = new ServiceResponse();
+            var list = new List<string>();
 
             try
             {
                 var values = Db.HashScan(table, key);
                 foreach (var value in values)
-                    list.Add(JObject.Parse(value.Value.ToString()));
+                    list.Add(value.Value.ToString());
 
                 response.ReturnValue = list;
                 response.Success = true;
@@ -157,7 +157,7 @@ namespace RedisLibrary
         public async Task<ServiceResponse> DeleteTableRow(string table, string key)
         {
             ServiceResponse response = new ServiceResponse();
-            var list = new List<JObject>();
+            var list = new List<string>();
 
             try
             {

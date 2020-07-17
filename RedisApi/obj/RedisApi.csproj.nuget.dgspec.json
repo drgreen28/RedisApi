@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisApi\\RedisApi.csproj": {}
+    "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisApi\\RedisApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisApi\\RedisApi.csproj": {
+    "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisApi\\RedisApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisApi\\RedisApi.csproj",
+        "projectUniqueName": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisApi\\RedisApi.csproj",
         "projectName": "RedisApi",
-        "projectPath": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisApi\\RedisApi.csproj",
-        "packagesPath": "C:\\Users\\drgre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisApi\\obj\\",
+        "projectPath": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisApi\\RedisApi.csproj",
+        "packagesPath": "C:\\Users\\dgreen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\drgre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dgreen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\RedisLibrary.csproj": {
-                "projectPath": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\RedisLibrary.csproj"
+              "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\RedisLibrary.csproj": {
+                "projectPath": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\RedisLibrary.csproj"
               }
             }
           }
@@ -57,9 +54,21 @@
               "target": "Package",
               "version": "[1.10.9, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.4.1, )"
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [
@@ -80,24 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\RedisLibrary.csproj": {
+    "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\RedisLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\RedisLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\RedisLibrary.csproj",
         "projectName": "RedisLibrary",
-        "projectPath": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\RedisLibrary.csproj",
-        "packagesPath": "C:\\Users\\drgre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drgre\\source\\repos\\Redis\\RedisApi\\RedisLibrary\\obj\\",
+        "projectPath": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\RedisLibrary.csproj",
+        "packagesPath": "C:\\Users\\dgreen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dgreen\\Documents\\Source\\RedisApi\\RedisLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\drgre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dgreen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -125,6 +131,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -132,6 +142,14 @@
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.1.30, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [
@@ -145,11 +163,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

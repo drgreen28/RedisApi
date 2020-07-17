@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 using RedisLibrary;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace RedisApi.Controllers
 {
@@ -36,48 +37,48 @@ namespace RedisApi.Controllers
         }
 
         [HttpPost("Table/{tableName}/{key}")]
-        public async Task<IActionResult> CreateTableAsync(string tableName, string key, [FromBody] JObject jObject)
+        public async Task<ServiceResponse> CreateTableAsync(string tableName, string key, [FromBody] string value)
         {
-            var redis = new RedisService<JObject>(Factory);
-            var response = await redis.SaveTable(tableName, jObject, key);
+            var redis = new RedisService<string>(Factory);
+            var response = await redis.SaveTable(tableName, value, key);
 
-            return Ok(response);
+            return response;
         }
 
         [HttpGet("Table/{tableName}")]
-        public async Task<IActionResult> GetTableAsync(string tableName)
+        public async Task<ServiceResponse> GetTableAsync(string tableName)
         {
-            var redis = new RedisService<JObject>(Factory);
+            var redis = new RedisService<string>(Factory);
             var values = await redis.GetTable(tableName);
 
-            return new JsonResult(values);
+            return values;
         }
 
         [HttpGet("Table/{tableName}/{key}")]
-        public async Task<IActionResult> GetTableAsync(string tableName, string key)
+        public async Task<ServiceResponse> GetTableAsync(string tableName, string key)
         {
-            var redis = new RedisService<JObject>(Factory);
+            var redis = new RedisService<string>(Factory);
             var values = await redis.GetTable(tableName, key);
 
-            return new JsonResult(values);
+            return values;
         }
 
         [HttpDelete("Table/{tableName}/{key}")]
-        public async Task<IActionResult> DeleteTableRowAsync(string tableName, string key)
+        public async Task<ServiceResponse> DeleteTableRowAsync(string tableName, string key)
         {
             var redis = new RedisService<string>(Factory);
             var response = await redis.DeleteTableRow(tableName, key);
 
-            return Ok(response);
+            return response;
         }
 
         [HttpPost("Table/ExpireKey/{key}/{seconds}")]
-        public async Task<IActionResult> ExpireKey(string key, int seconds)
+        public async Task<ServiceResponse> ExpireKey(string key, int seconds)
         {
-            var redis = new RedisService<JObject>(Factory);
+            var redis = new RedisService<string>(Factory);
             var values = await redis.ExpireKey(key, new TimeSpan(0, 0, seconds));
 
-            return new JsonResult(values);
+            return values;
         }
 
 

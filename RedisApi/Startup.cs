@@ -13,9 +13,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Swashbuckle.AspNetCore.Swagger;
 using RedisLibrary;
 using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Any;
 
 namespace RedisApi
 {
@@ -54,6 +54,24 @@ namespace RedisApi
 
             services.AddSwaggerGen(c =>
             {
+                //c.GeneratePolymorphicSchemas(infoType =>
+                //{
+                //    if (infoType == typeof(ServiceResponse<AnyType>))
+                //    {
+                //        return new Type[] {
+                //            typeof(ServiceResponse<AnyType>)
+                //        };
+                //    }
+                //    return Enumerable.Empty<Type>();
+                //}, (discriminator) =>
+                //{
+                //    if (discriminator == typeof(List<string>))
+                //    {
+                //        return "ReturnValue";
+                //    }
+                //    return null;
+                //});
+                //c.MapType<ServiceResponse<List<string>>>(() => new OpenApiSchema { Type = ""});
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Redis API", Version = "v1" });
             });
         }

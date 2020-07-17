@@ -8,7 +8,7 @@ namespace RedisLibrary
     {
         private readonly Lazy<ConnectionMultiplexer> connection;
 
-        private readonly IOptions<RedisConfiguration> redis;
+        //private readonly IOptions<RedisConfiguration> redis;
 
         public RedisConnectionFactory(IOptions<RedisConfiguration> redis)
         {
