@@ -1,9 +1,0 @@
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\bin\Debug\netcoreapp3.1\RedisLibrary.deps.json
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\bin\Debug\netcoreapp3.1\RedisLibrary.dll
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.csprojAssemblyReference.cache
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.AssemblyInfoInputs.cache
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.AssemblyInfo.cs
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.csproj.CoreCompileInputs.cache
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\bin\Debug\netcoreapp3.1\RedisLibrary.pdb
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.dll
-C:\Users\drgre\source\repos\RedisApi\RedisLibrary\obj\Debug\netcoreapp3.1\RedisLibrary.pdb
