@@ -8,10 +8,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A9EA03B-AACA-4A9B-855F-17D2B54DF071}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yaml = docker-compose.yaml
+		redis-cluster.yaml = redis-cluster.yaml
 		redis-dev.yaml = redis-dev.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisLibrary", "RedisLibrary\RedisLibrary.csproj", "{C0D398FC-1A92-497C-9C9A-300D40B1E98A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisLibrary", "RedisLibrary\RedisLibrary.csproj", "{C0D398FC-1A92-497C-9C9A-300D40B1E98A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
