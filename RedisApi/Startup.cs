@@ -54,31 +54,36 @@ namespace RedisApi
 
             services.AddSwaggerGen(c =>
             {
-                //c.GeneratePolymorphicSchemas(infoType =>
-                //{
-                //    if (infoType == typeof(ServiceResponse<AnyType>))
-                //    {
-                //        return new Type[] {
-                //            typeof(ServiceResponse<AnyType>)
-                //        };
-                //    }
-                //    return Enumerable.Empty<Type>();
-                //}, (discriminator) =>
-                //{
-                //    if (discriminator == typeof(List<string>))
-                //    {
-                //        return "ReturnValue";
-                //    }
-                //    return null;
-                //});
-                //c.MapType<ServiceResponse<List<string>>>(() => new OpenApiSchema { Type = ""});
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Redis API", Version = "v1" });
             });
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowKubeApi",
+            //      builder =>
+            //      {
+            //          builder
+            //          .WithOrigins("https://localhost:49155/")
+            //          .AllowAnyHeader()
+            //          .AllowAnyMethod();
+            //      });
+            //    options.AddPolicy("AllowKube",
+            //      builder =>
+            //      {
+            //          builder
+            //          .WithOrigins("http://localhost")
+            //          .AllowAnyHeader()
+            //          .AllowAnyMethod();
+            //      });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //app.UseCors("AllowKubeApi");
+            //app.UseCors("AllowKube");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
