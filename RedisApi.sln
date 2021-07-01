@@ -10,9 +10,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yaml = docker-compose.yaml
 		redis-cluster.yaml = redis-cluster.yaml
 		redis-dev.yaml = redis-dev.yaml
+		redis-service.yaml = redis-service.yaml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisLibrary", "RedisLibrary\RedisLibrary.csproj", "{C0D398FC-1A92-497C-9C9A-300D40B1E98A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisTest", "RedisTest\RedisTest.csproj", "{267A2322-4637-499D-ACA2-4E687E72DE09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +31,10 @@ Global
 		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D398FC-1A92-497C-9C9A-300D40B1E98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267A2322-4637-499D-ACA2-4E687E72DE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267A2322-4637-499D-ACA2-4E687E72DE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267A2322-4637-499D-ACA2-4E687E72DE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267A2322-4637-499D-ACA2-4E687E72DE09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,7 +12,12 @@ namespace RedisLibrary
 
         public RedisConnectionFactory(IOptions<RedisConfiguration> redis)
         {
-            connection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(redis.Value.Host));
+            ConfigurationOptions options = new ConfigurationOptions()
+            {
+                Password = redis.Value.Password,
+                EndPoints = { { redis.Value.Host, redis.Value.Port } }
+            };
+            connection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(options));
         }
 
         public ConnectionMultiplexer Connection()
