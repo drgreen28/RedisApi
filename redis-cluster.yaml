@@ -37,8 +37,13 @@ spec:
     spec:
       containers:
       - name: master
-        image: k8s.gcr.io/redis:e2e
-        args: ["--save", "900", "1", "--save", "30", "2"]
+        image: bitnami/redis
+        args: ["--save", "900", "1", "--save", "30", "2", "--requirepass", "password123", "--dir", "/data"]
+        env:
+        - name: REDIS_REPLICATION_MODE
+          value: master
+        - name: REDIS_PASSWORD
+          value: masterpassword123
         ports:
         - containerPort: 6379
         command:
@@ -87,10 +92,18 @@ spec:
     spec:
       containers:
       - name: slave
-        image: gcr.io/google_samples/gb-redisslave:v3
+        image: bitnami/redis
         env:
-        - name: GET_HOSTS_FROM
-          value: env
+        - name: REDIS_REPLICATION_MODE
+          value: slave
+        - name: REDIS_MASTER_HOST
+          value: redis-master
+        - name: REDIS_MASTER_PORT_NUMBER
+          value: "6379"
+        - name: REDIS_MASTER_PASSWORD
+          value: masterpassword123
+        - name: REDIS_PASSWORD
+          value: password123
         ports:
         - containerPort: 6379
 ---

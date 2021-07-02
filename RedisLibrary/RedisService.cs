@@ -172,5 +172,53 @@ namespace RedisLibrary
 
             return response;
         }
+
+        public async Task<ServiceResponse> GeoAdd(string table, double longitude, double latitude, string key)
+        {
+            ServiceResponse response = new ServiceResponse();
+
+            try
+            {
+                if (true)
+                {
+                    RedisValue value = new RedisValue(key);
+                    await Db.GeoAddAsync(table, longitude, latitude, value);
+                    response.Message = "Success";
+                    response.Success = true;
+                }
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed: " + e.Message;
+            }
+
+            return response;
+        }
+
+        public async Task<ServiceResponse> GeoDist(string table, string car, string waypoint)
+        {
+            ServiceResponse response = new ServiceResponse();
+
+            try
+            {
+                if (true)
+                {
+                    var list = new List<string>();
+                    var dist = await Db.GeoDistanceAsync(table, car, waypoint, GeoUnit.Miles);
+                    list.Add(dist.Value.ToString());
+                    response.ReturnValue = list;
+                    response.Message = "Success";
+                    response.Success = true;
+                }
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed: " + e.Message;
+            }
+
+            return response;
+        }
     }
 }

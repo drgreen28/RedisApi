@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: redis-api
-          image: drgreen28/redisapi:1.0.4
+          image: drgreen28/redisapi:1.0.6
           imagePullPolicy: Always
           ports:
             - containerPort: 80
